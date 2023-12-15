@@ -1,0 +1,70 @@
+### Find All Content
+GET http://localhost:8080/api/content
+
+
+### Get Content by ID
+GET http://localhost:8080/api/content/1
+
+### Create new Cotent
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "2 blog",
+  "desc": "2 post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-12-15T19:49:45.6231327",
+  "dataUpdated": null,
+  "url": ""
+}
+
+### Update existing Cotent
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!!",
+  "desc": "MY FIRST POST!!!",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-12-15T19:49:45.6231327",
+  "dataUpdated": "2023-12-15T19:49:45.6231327",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
+### Update existing Cotent with invalid id
+PUT http://localhost:8080/api/content/99
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!!",
+  "desc": "MY FIRST POST!!!",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-12-15T19:49:45.6231327",
+  "dataUpdated": "2023-12-15T19:49:45.6231327",
+  "url": "http://localhost:8080/my-first-blog-post"
+}
+
+### Delete by ID
+DELETE http://localhost:8080/api/content/2
+
+
+### Validate the POST title with @NotEmpty annotation
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "",
+  "desc": "2 post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-12-15T19:49:45.6231327",
+  "dataUpdated": null,
+  "url": ""
+}
