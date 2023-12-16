@@ -35,7 +35,7 @@ public class ContentCollectionRepository {
 
     @PostConstruct
     private void init(){
-        Content cantent = new Content(
+        Content content = new Content(
                 1,
                 "blog",
                 "post",
@@ -46,7 +46,7 @@ public class ContentCollectionRepository {
                 ""
         );
 
-        contentList.add(cantent);
+        contentList.add(content);
     }
 
     public boolean existsById(Integer id) {

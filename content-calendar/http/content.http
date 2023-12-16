@@ -16,7 +16,7 @@ Content-Type: application/json
   "status": "IDEA",
   "contentType": "ARTICLE",
   "dateCreated": "2023-12-15T19:49:45.6231327",
-  "dataUpdated": null,
+  "dataUpdated": "",
   "url": ""
 }
 
@@ -68,3 +68,17 @@ Content-Type: application/json
   "dataUpdated": null,
   "url": ""
 }
+
+
+### Content find by keyword
+GET http://localhost:8080/api/content/filter/GPT
+
+### Content find by with invalide keyword
+GET http://localhost:8080/api/content/filter/Data
+
+### Filter content based on the status ofthe content
+GET http://localhost:8080/api/content/filter/status/IDEA
+
+### Filter content based on the status ofthe content
+GET http://localhost:8080/api/content/filter/status/COMPLETED
+
